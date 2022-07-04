@@ -1,0 +1,106 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:vm="clr-namespace:PingWpf.ViewModels"
+    xmlns:Converters="clr-namespace:PingWpf.Converters" x:Class="PingWpf.Views.PingTaskView"
+    mc:Ignorable="d" d:DesignWidth="250"
+    d:DataContext="{d:DesignInstance Type=vm:PingTaskViewModel, IsDesignTimeCreatable=True}" Height="28"
+    >
+
+    <UserControl.Resources>
+        <Converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <Converters:BoolToBrushConverter x:Key="BoolToBrushConverter"/>
+    </UserControl.Resources>
+
+    <!--<Border 
+         Background="{Binding Fondo}"
+		BorderBrush="DarkBlue" 
+		CornerRadius="6" 
+		Margin="2"
+		Padding="2"
+		BorderThickness="2"
+		VerticalAlignment="Stretch" 
+		HorizontalAlignment="Stretch"
+		>
+        <Grid>
+            <StackPanel>
+                <DockPanel>
+                    <Label Grid.Row="0" Grid.Column="0" Content="{Binding Address}" Name="lblAddres" ToolTip="ip"/>
+                    <Button DockPanel.Dock="Bottom" Content="[D]" Padding="0" Command="{Binding Address}"  Background="Transparent" Name="Detalle" Click="Detalle_Click" HorizontalAlignment="Right" ToolTip="Detalle" />
+                </DockPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        --><!--<ColumnDefinition />--><!--
+                    </Grid.ColumnDefinitions>
+                    --><!--<Label Grid.Column="0" Content="{Binding Address}" HorizontalAlignment="Center" ToolTip="ip"/>--><!--
+                    <Label Grid.Column="0" Content="{Binding HostName}" HorizontalAlignment="Right" Name="lblNombre" ToolTip="nombre"/>
+                    <Label Grid.Column="1" Content="{Binding LastTime}" HorizontalAlignment="Right" ToolTip="tiempo ultimo Ping"/>
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                        --><!--<Label Content="Ø" Margin="0" Padding="0,5"/>--><!--
+                        <Label Content="{Binding AverageTime}" ToolTip="tiempo promedio"/>
+                    </StackPanel>
+                    <Label Grid.Column="3" Content="{Binding SuccessRate}" HorizontalAlignment="Right" ToolTip="tasa de exito"/>
+                    --><!--<Label Grid.Column="4" Content="{Binding TimeSegPingFailure}" HorizontalAlignment="Right" />-->
+                    <!--<Label Grid.Column="4" Name="lblTimeSegPingFailure" HorizontalAlignment="Right" />--><!--
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>-->
+
+
+
+
+<Border 
+		BorderBrush="DarkBlue" 
+		CornerRadius="0" 
+		Margin="2"
+		Padding="2"
+		BorderThickness="1"
+		VerticalAlignment="Stretch" 
+		HorizontalAlignment="Stretch"
+		Background="{Binding LastPingSuccessfull, Converter={StaticResource BoolToBrushConverter}}">
+    <Grid>
+           <StackPanel>
+                <DockPanel>
+                    <!--<Button DockPanel.Dock="Right" Content="X" Command="{Binding RemoveTask, Mode=OneWay}" 
+                        Width="20" Height="20" Padding="0"
+                        Background="Transparent"/>
+                    <Label Grid.Row="0" Grid.Column="0" Content="{Binding Address}" />
+                    <Label Grid.Row="0" Grid.Column="1"  Content="{Binding HostName}"/>
+                </DockPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>-->
+    <Label Content="{Binding Res}" Name="StringDataLabel" HorizontalAlignment="Center" Background="{Binding LastPingSuccessfull, Converter={StaticResource BoolToBrushConverter}}" Width="370"   />
+                    <Button DockPanel.Dock="Bottom" Content="[D]" Padding="0" Command="{Binding RemoveTask, Mode=OneWay}"  Background="Transparent" HorizontalAlignment="Right" ToolTip="Detalle" />
+                    <!--<Button DockPanel.Dock="Bottom" Content="Detalle" Padding="0" Command="{Binding Address}"  Background="Transparent" Name="Detalle" HorizontalAlignment="Right" ToolTip="Detalle" />-->
+                </DockPanel>
+            </StackPanel>
+            <!--<StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Label Content="Ø" Margin="0" Padding="0,5"/>
+            <Label Content="{Binding AverageTime}"/>
+        </StackPanel>
+        <Label Grid.Column="2" Content="{Binding SuccessRate}" HorizontalAlignment="Right"/>
+    </Grid>
+    </StackPanel>
+            <Grid Grid.Row="1" Background="Coral" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+              Visibility="{Binding ErrorVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                <Button Content="X" Command="{Binding HideErrorMessage}" 
+                    HorizontalAlignment="Right" VerticalAlignment="Top"  Width="20" Height="20" Padding="0"
+                    Background="Transparent"/>
+                <Label Content="{Binding ErrorMessage}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>-->
+        </Grid>
+      
+    </Border>
+</UserControl>

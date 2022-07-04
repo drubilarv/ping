@@ -1,0 +1,17 @@
+﻿<Window x:Class="PingWpf.WindowsDetallePing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="Detalle Ping" Height="347.661" Width="544.128" WindowStyle="ToolWindow" Closed="Window_Closed"
+        >
+    <Grid Margin="10,0,2,-7">
+        <!--<TextBox HorizontalAlignment="Left" Name="txtDetalle" VerticalScrollBarVisibility="Auto" Height="256" Margin="0,10,0,0" TextWrapping="Wrap" Text="{x:Null}" VerticalAlignment="Top" Width="514"/>-->
+        <ListBox HorizontalAlignment="Center" Name="ltbDetalle1" Height="256" Margin="0,10,0,0" VerticalAlignment="Center" Width="514"/>
+        <ListBox HorizontalAlignment="Center" Name="ltbDetalle2" Height="256" Margin="0,10,0,0" VerticalAlignment="Center" Width="514"/>
+        <ListBox HorizontalAlignment="Center" Name="ltbDetalle3" Height="256" Margin="0,10,0,0" VerticalAlignment="Center" Width="514"/>
+        <ListBox HorizontalAlignment="Center" Name="ltbDetalle4" Height="256" Margin="0,10,0,0" VerticalAlignment="Center" Width="514"/>
+        <ListBox HorizontalAlignment="Center" Name="ltbDetalle5" Height="256" Margin="0,10,0,0" VerticalAlignment="Center" Width="514"/>
+        <ListBox HorizontalAlignment="Center" Name="ltbDetalle6" Height="256" Margin="5,19,5,41" VerticalAlignment="Center" Width="514"/>
+        <!--<Button Content="Cerrar" Name="btnClose" HorizontalAlignment="Center" Margin="222,284,222,0" VerticalAlignment="Top" Width="80" Height="27" Click="btnClose_Click"/>-->
+    </Grid>
+</Window>

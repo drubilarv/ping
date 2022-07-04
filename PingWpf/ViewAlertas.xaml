@@ -1,0 +1,35 @@
+﻿<Window x:Class="PingWpf.ViewAlertas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+       ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="Ver Alertas" Height="468.041" Width="829.717"
+        >
+    <Grid Margin="0,0,0,4">
+        <dxg:GridControl Name="GridAlertas" AutoGenerateColumns="None" EnableSmartColumnsGeneration="False" HorizontalAlignment="Left" Margin="36,120,0,0" VerticalAlignment="Top" Height="294" Width="753">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="id" Header="ID" IsSmart="True" Width="160" ReadOnly="True" Visible="False"/>
+                <dxg:GridColumn FieldName="nombreEquipo" Header="Equipo" IsSmart="True" Width="160" ReadOnly="True" />
+                <dxg:GridColumn FieldName="timestamp" Header="Fecha" IsSmart="True" Width="140" ReadOnly="True" />
+                <dxg:GridColumn FieldName="hora" Header="Hora" IsSmart="True" Width="140" ReadOnly="True" />
+                <dxg:GridColumn FieldName="porcentajePerdida" Header="% Perdida ping" IsSmart="True" Width="100" ReadOnly="True" />
+                <dxg:GridColumn FieldName="leido" Header="Leido" IsSmart="True" Width="140" ReadOnly="True" />
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView AllowPerPixelScrolling="True"  AllowEditing="False" AllowColumnFiltering="False" ShowGroupPanel="False"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+
+        <Label Content="Fecha Inicio" HorizontalAlignment="Left" Margin="326,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha Fin" HorizontalAlignment="Left" Margin="338,81,0,0" VerticalAlignment="Top"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="652,77,0,0" VerticalAlignment="Top" Width="102" Click="Button_Click"/>
+        <ComboBox Name="cboxGrupo" HorizontalAlignment="Left" Margin="92,40,0,0" VerticalAlignment="Top" Width="120"  SelectionChanged="cboxGrupo_SelectionChanged" />
+        <ComboBox Name="cboxEquipo" HorizontalAlignment="Left" Margin="92,80,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="1"/>
+        <DatePicker HorizontalAlignment="Left" Margin="408,37,0,0" VerticalAlignment="Top" Name="fechaInicio"/>
+        <DatePicker HorizontalAlignment="Left" Margin="408,78,0,0" VerticalAlignment="Top" Name="fechaFin" />
+        <CheckBox Name="checkLeido" Content="Leído" HorizontalAlignment="Left" Margin="666,37,0,0" VerticalAlignment="Top"/>
+        <Label Content="Equipo" HorizontalAlignment="Left" Margin="36,80,0,0" VerticalAlignment="Top"/>
+        <Label Content="Grupo" HorizontalAlignment="Left" Margin="36,40,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

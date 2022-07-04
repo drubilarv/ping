@@ -1,0 +1,14 @@
+﻿<Window x:Class="PingWpf.AsignarAccciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="Asignar Acciones" Height="260.526" Width="286.466"
+        >
+    <Grid>
+        <dxe:CheckEdit Name="CheckPings" HorizontalAlignment="Left" Margin="36,86,0,0" VerticalAlignment="Top" Width="208" Content="Recibir notificación ping no exitoso"/>
+        <dxe:CheckEdit Name="CheckReportes" HorizontalAlignment="Left" Margin="36,35,0,0" VerticalAlignment="Top" Width="150" EditValue="true" IsChecked="False" Content="Recibir reportes"/>
+        <Button Content="Asignar" HorizontalAlignment="Left" Margin="100,152,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="25"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="PingWpf.AgregarEquipo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+          Title="Equipo" Height="341.5" Width="605"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        >
+    <Grid Margin="0,0,4,13">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="IP:" Height="28" HorizontalAlignment="Left" Margin="91,54,0,0" 
+                   VerticalAlignment="Top" FontSize="14" />
+        <Label Content="Descripcion:" FontSize="14" Height="28" HorizontalAlignment="Left" Margin="29,134,0,0"
+                   VerticalAlignment="Top" RenderTransformOrigin="1.133,1.214" />
+        <Label Content="Nombre:" FontSize="14" Height="28" HorizontalAlignment="Left" Margin="51,94,0,0"
+                   VerticalAlignment="Top"  />
+
+        <Label Content="Activo:" FontSize="14" Height="28" HorizontalAlignment="Left" Margin="360,134,0,0" VerticalAlignment="Top" />
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="414,12,0,0" Name="txtDispositivoInicio" VerticalAlignment="Top" Width="102" />-->
+        <Label Content="Grupo:" FontSize="14" Height="28" HorizontalAlignment="Left" Margin="358,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.46,1.28" />
+        <Label Content="Ubicación:" FontSize="14" Height="28" HorizontalAlignment="Left" Margin="45,179,0,0" VerticalAlignment="Top"/>
+        <TextBox  Name="txtIp" HorizontalAlignment="Left" Height="23" Margin="140,54,0,0" TextWrapping="Wrap" Text="{x:Null}" VerticalAlignment="Top" Width="148" />
+        <TextBox  Name="txtName" HorizontalAlignment="Left" Height="23" Margin="140,94,0,0" TextWrapping="Wrap" Text="{x:Null}" VerticalAlignment="Top" Width="148" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="140,134,0,0" Name="txtDesc"  VerticalAlignment="Top" Width="148" FontSize="14"   RenderTransformOrigin="1.001,0.513"  />
+        <TextBox FontSize="14" Height="28"  HorizontalAlignment="Left" Margin="140,179,0,0" Name="txtUbicacion" VerticalAlignment="Top" Width="428" MaxLength="200"  />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="430,49,0,0" Name="cboxConfigu" VerticalAlignment="Top" Width="138" SelectedIndex="0" />
+        <ComboBox  Name="cboxGrupo" HorizontalAlignment="Left" Margin="430,95,0,0" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.051,0.909" SelectedIndex="0"/>
+        <dxe:CheckEdit Name="CheckEstado" HorizontalAlignment="Left" Margin="430,140,0,0" VerticalAlignment="Top" Width="24" Content=""/>
+        <GroupBox Header="Equipo" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="262" Width="576"/>
+        <Button Content="Guardar"  HorizontalAlignment="Left" Height="26" Margin="159,232,0,0" VerticalAlignment="Top" Width="75" Click="Agregar_Click"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Height="26" Margin="358,232,0,0" VerticalAlignment="Top" Width="75" Click="Cancelar_Click" />
+        <Label Content="Configuración:" FontSize="14" Height="28" HorizontalAlignment="Left" Margin="312,49,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.46,1.28" />
+
+
+    </Grid>
+</Window>

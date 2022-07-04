@@ -1,0 +1,36 @@
+﻿<Window x:Class="PingWpf.AlertasMonitoreo_view"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+         Title="Alertas Monitoreo" Height="388.883" Width="792.891"
+        >
+    <Grid Margin="0,0,2,3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="499*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="135*"/>
+        </Grid.ColumnDefinitions>
+        <dxg:GridControl x:Name="GridAlerta" AutoGenerateColumns="None" EnableSmartColumnsGeneration="True" HorizontalAlignment="Left"   Margin="20,24,0,0" VerticalAlignment="Top" Height="260" Width="744" IsFilterEnabled="False" Grid.ColumnSpan="3" >
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="id" Header="ID" IsSmart="True" Width="160" ReadOnly="True" Visible="False"/>
+                <dxg:GridColumn FieldName="nombreEquipo" Header="Equipo" IsSmart="True" Width="170" ReadOnly="True" />
+                <dxg:GridColumn FieldName="timestamp" Header="Fecha" IsSmart="True" Width="140" ReadOnly="True" />
+                <dxg:GridColumn FieldName="hora" Header="Hora" IsSmart="True" Width="140" ReadOnly="True" />
+                <dxg:GridColumn FieldName="porcentajePerdida" Header="% Perdida ping" IsSmart="True" Width="100" ReadOnly="True" />
+                <dxg:GridColumn FieldName="leido" Header="Leido" IsSmart="True" Width="140" AllowEditing="True"  />
+
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView AllowPerPixelScrolling="True"  AllowEditing="False" AllowColumnFiltering="False" ShowGroupPanel="False">
+                    <dxg:TableView.BindingGroup>
+                        <BindingGroup/>
+                    </dxg:TableView.BindingGroup>
+                </dxg:TableView>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+        <Button Content="Cerrar" Click="Button_Click" Margin="442,302,98,23" Background="{x:Null}" Grid.ColumnSpan="2"/>
+        <Button Content="Guardar" Click="Button_Click_1"  Margin="241,302,148.5,23" Background="{x:Null}" />
+
+    </Grid>
+</Window>

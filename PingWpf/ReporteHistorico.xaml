@@ -1,0 +1,27 @@
+﻿<Window x:Class="PingWpf.ReporteHistorico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:winForms="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="Reporte Historico" Height="563.962" Width="904.511"
+        >
+    <Grid Margin="0,0,0,13">
+        <GroupBox Header="Vista" Name="groupBox2" Margin="12,103,12,0" Height="409" VerticalAlignment="Top">
+            <WindowsFormsHost x:Name="Host_Copy" Margin="10,4,14,8">
+                <winForms:ReportViewer x:Name="ReporteCuerpo"/>
+            </WindowsFormsHost>
+        </GroupBox>
+        <!--<Button Name="btnExporExcel" Content="Exportar a Excel" HorizontalAlignment="Left" Margin="202,427,0,0" VerticalAlignment="Top" Width="110" Click="btnExporExcel_Click"/>-->
+        <ComboBox Name="cbbGrupos"  HorizontalAlignment="Left" Margin="105,29,0,0" VerticalAlignment="Top" Width="184" SelectionChanged="cbbGrupos_SelectionChanged"/>
+        <Label Content="Grupo" HorizontalAlignment="Left" Margin="50,33,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cbbEquipos"  HorizontalAlignment="Left" Margin="105,76,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label Content="Equipo" HorizontalAlignment="Left" Margin="50,80,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="DatePickerFechaDesde" HorizontalAlignment="Left" Margin="457,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha/Hora desde" HorizontalAlignment="Left" Margin="356,35,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="DatePickerFechaHasta" HorizontalAlignment="Left" Margin="460,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha/Hora hasta" HorizontalAlignment="Left" Margin="356,78,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="chkExito" Content="Exito ping" HorizontalAlignment="Left" Margin="702,34,0,0" VerticalAlignment="Top"/>
+        <Button Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="684,74,0,0" VerticalAlignment="Top" Width="111" Click="btnBuscar_Click"/>
+
+    </Grid>
+</Window>
